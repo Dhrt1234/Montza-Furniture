@@ -6,7 +6,13 @@ let cors=require("cors");
 const { adminModel } = require("./App/models/adminModel");
 const { webRoutes } = require("./App/routes/web/webRoutes");
 const { companyModel } = require("./App/models/companyModel");
-app.use(cors())
+// app.use(cors())
+app.use(cors({
+  origin: 'https://ecom-eo3v.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 app.use(express.json())
 require("dotenv").config()// for imp credentials files
 app.use("/admin",adminRoutes)//http://localhost:8000/admin

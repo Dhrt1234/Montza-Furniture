@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaAngleRight } from "react-icons/fa";
-import { Country } from '../data/Country';
+import { Country } from '../Data/Country';
 
 import { store } from '../store/store';
 import axios from 'axios';

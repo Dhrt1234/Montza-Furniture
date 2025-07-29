@@ -1,4 +1,5 @@
-const { transporter } = require("../../config/mailConfig")
+const {transporter}= require("../../config/mailConfig")
+
 const { adminModel } = require("../../models/adminModel");
 let fs = require("fs");
 

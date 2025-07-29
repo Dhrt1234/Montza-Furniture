@@ -1,26 +1,30 @@
 import React from 'react'
-import Sidebar  from './Sidebar'
+import Sidebar from './Sidebar'
 import Header from './Header'
 
 import { Outlet } from 'react-router'
 import Footer from './Footer'
+// import Footer from './footer'
+// import Footer from './footer'
 export default function MainLayout() {
   return (
     <div>
-<section className='w-full'>
+      <section className='w-full'>
 
-    <div className='grid grid-cols-[20%_auto]'>
+        <div className='grid grid-cols-[20%_auto]'>
 
-        <div>
+          <div>
             <Sidebar />
+          </div>
+          <div>
+            <Header />
+            <Outlet />
+            {/* <Footer /> */}
+            {/* <Footer/> */}
+            <Footer/>
+          </div>
         </div>
-        <div>
-        <Header /> 
-        <Outlet />
-        <Footer/>
-        </div>
-    </div>
-</section>
+      </section>
 
 
     </div>

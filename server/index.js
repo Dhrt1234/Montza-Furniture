@@ -8,7 +8,7 @@ const { webRoutes } = require("./App/routes/web/webRoutes");
 const { companyModel } = require("./App/models/companyModel");
 // app.use(cors())
 app.use(cors({
-  origin: 'https://ecom-eo3v.vercel.app',
+  origin: 'https://montza-furniture-admin.vercel.app/',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true

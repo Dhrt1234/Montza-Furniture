@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const { transporter } = require("../../Config/mailConfig")
+const {transporter} = require("../../config/mailConfig")
 
 const { userModel } = require('../../models/userModels');
 let jwt = require('jsonwebtoken');

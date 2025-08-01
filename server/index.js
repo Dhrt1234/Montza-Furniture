@@ -38,6 +38,9 @@ app.use("/uploads/product", express.static("uploads/product"))
 app.use("/uploads/sub_subcategory", express.static("uploads/sub_subcategory"))
 
 // mongoose.connect('mongodb://127.0.0.1:27017/ecomFurniture')// database connectivity
+   app.listen(process.env.PORT, () => {
+  console.log("Server running on port", process.env.PORT);
+});
 mongoose.connect('mongodb+srv://dharti0212business:yCGRjwLwYUGxHIfT@cluster0.qztmpw9.mongodb.net/')// database connectivity
 .then(  async (res)=>{
 
@@ -64,6 +67,6 @@ mongoose.connect('mongodb+srv://dharti0212business:yCGRjwLwYUGxHIfT@cluster0.qzt
    }
 
     console.log("DB Connect")
-    app.listen(process.env.PORT)
+
 
 })

@@ -8,7 +8,7 @@ const { webRoutes } = require("./App/routes/web/webRoutes");
 const { companyModel } = require("./App/models/companyModel");
 // app.use(cors())
 const allowedOrigins = [
-  "https://montza-furniture-admin.vercel.app"
+  "https://montza-furniture-website.vercel.app"
 ];
 app.use(cors({
   origin: function (origin, callback) {
@@ -22,7 +22,7 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
-app.options("*", cors());
+
 app.use(express.json())
 require("dotenv").config()// for imp credentials files
 app.use("/admin",adminRoutes)//http://localhost:8000/admin

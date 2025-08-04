@@ -6,9 +6,10 @@ let cors=require("cors");
 const { adminModel } = require("./App/models/adminModel");
 const { webRoutes } = require("./App/routes/web/webRoutes");
 const { companyModel } = require("./App/models/companyModel");
-// app.use(cors())
+ app.use(cors())
 const allowedOrigins = [
-  "https://montza-furniture-website.vercel.app"
+  "https://montza-furniture-website.vercel.app",
+  "https://montza-furniture-admin.vercel.app"
 ];
 app.use(cors({
   origin: function (origin, callback) {
